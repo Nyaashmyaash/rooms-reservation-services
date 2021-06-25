@@ -1,7 +1,7 @@
 package com.nyash.rooms.roomsreservationservices;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @Table(name="RESERVATION")
