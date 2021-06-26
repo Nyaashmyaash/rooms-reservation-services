@@ -21,7 +21,7 @@ public class RoomsReservationServicesApplication {
     @Bean
     public Docket api(){
         return new Docket(DocumentationType.SWAGGER_2).groupName("Reservations").select()
-                .apis(RequestHandlerSelectors.basePackage("com.frankmoley.services.reservation"))
+                .apis(RequestHandlerSelectors.basePackage("com.nyash.rooms.roomsreservationservices"))
                 .paths(any()).build().apiInfo(new ApiInfo("Reservation Services",
                         "A set of services to provide data access to reservations", "1.0.0", null,
                         null,null, null));
