@@ -1,6 +1,12 @@
-package com.nyash.rooms.roomsreservationservices;
+package com.nyash.rooms.roomsreservationservices.controller;
 
+
+import com.nyash.rooms.roomsreservationservices.dto.Reservation;
+import com.nyash.rooms.roomsreservationservices.repository.ReservationRepository;
+import com.nyash.rooms.roomsreservationservices.model.ReservationEntity;
 import com.nyash.rooms.roomsreservationservices.utils.DateTimeUtils;
+import com.nyash.rooms.roomsreservationservices.utils.ReservationTranslator;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
@@ -14,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/reservations")
+@RequestMapping(value="/reservations")
 @Api(value="reservations", description = "Data service operations on reservations", tags=("reservations"))
 public class ReservationController {
 
@@ -29,15 +35,15 @@ public class ReservationController {
 
     @RequestMapping(method = RequestMethod.GET)
     @ApiOperation(value="Get All Reservations", notes="Gets all reservations in the system", nickname="getReservations")
-    public List<Reservation> findAll(@RequestParam(name = "date", required = false)String date) {
+    public List<Reservation> findAll(@RequestParam(name="date", required=false)String date){
         List<ReservationEntity> entities = null;
-        if (StringUtils.isNotBlank(date)){
+        if(StringUtils.isNotBlank(date)){
             entities = this.reservationRepository.findByDate(this.dateTimeUtils.createDateFromDateString(date));
-        } else {
+        }else{
             entities = (List<ReservationEntity>) this.reservationRepository.findAll();
         }
         List<Reservation> reservations = new ArrayList<>(entities.size());
-        entities.forEach(entity -> {
+        entities.forEach(entity->{
             reservations.add(this.reservationTranslator.translateEntityToReservation(entity));
         });
         return reservations;

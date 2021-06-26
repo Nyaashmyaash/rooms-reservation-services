@@ -1,7 +1,7 @@
 package com.nyash.rooms.roomsreservationservices.utils;
 
-import com.nyash.rooms.roomsreservationservices.Reservation;
-import com.nyash.rooms.roomsreservationservices.ReservationEntity;
+import com.nyash.rooms.roomsreservationservices.dto.Reservation;
+import com.nyash.rooms.roomsreservationservices.model.ReservationEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

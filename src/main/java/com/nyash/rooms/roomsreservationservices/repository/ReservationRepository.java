@@ -1,5 +1,6 @@
-package com.nyash.rooms.roomsreservationservices;
+package com.nyash.rooms.roomsreservationservices.repository;
 
+import com.nyash.rooms.roomsreservationservices.model.ReservationEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface ReservationRepository extends CrudRepository<ReservationEntity, Long> {
-    List<Reservation> findByDate(Date date);
+    List<ReservationEntity> findByDate(Date date);
 }
