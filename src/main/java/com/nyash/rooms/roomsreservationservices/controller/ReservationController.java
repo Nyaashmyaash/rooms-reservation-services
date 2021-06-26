@@ -3,7 +3,7 @@ package com.nyash.rooms.roomsreservationservices.controller;
 
 import com.nyash.rooms.roomsreservationservices.dto.Reservation;
 import com.nyash.rooms.roomsreservationservices.repository.ReservationRepository;
-import com.nyash.rooms.roomsreservationservices.model.ReservationEntity;
+import com.nyash.rooms.roomsreservationservices.entity.ReservationEntity;
 import com.nyash.rooms.roomsreservationservices.utils.DateTimeUtils;
 import com.nyash.rooms.roomsreservationservices.utils.ReservationTranslator;
 

@@ -1,6 +1,6 @@
 package com.nyash.rooms.roomsreservationservices.repository;
 
-import com.nyash.rooms.roomsreservationservices.model.ReservationEntity;
+import com.nyash.rooms.roomsreservationservices.entity.ReservationEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
