@@ -1,4 +1,4 @@
-package com.nyash.rooms.roomsreservationservices.entity;
+package com.nyash.rooms.roomsreservationservices;
 
 import javax.persistence.*;
 import java.sql.Date;

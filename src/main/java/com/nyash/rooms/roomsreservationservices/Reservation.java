@@ -1,4 +1,4 @@
-package com.nyash.rooms.roomsreservationservices.dto;
+package com.nyash.rooms.roomsreservationservices;
 
 public class Reservation {
 

@@ -15,17 +15,17 @@ import static springfox.documentation.builders.PathSelectors.any;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableSwagger2
+//@EnableSwagger2
 public class RoomsReservationServicesApplication {
 
-    @Bean
-    public Docket api(){
-        return new Docket(DocumentationType.SWAGGER_2).groupName("Reservations").select()
-                .apis(RequestHandlerSelectors.basePackage("com.nyash.rooms.roomsreservationservices"))
-                .paths(any()).build().apiInfo(new ApiInfo("Reservation Services",
-                        "A set of services to provide data access to reservations", "1.0.0", null,
-                        null,null, null));
-    }
+//    @Bean
+//    public Docket api(){
+//        return new Docket(DocumentationType.SWAGGER_2).groupName("Reservations").select()
+//                .apis(RequestHandlerSelectors.basePackage("com.nyash.rooms.roomsreservationservices"))
+//                .paths(any()).build().apiInfo(new ApiInfo("Reservation Services",
+//                        "A set of services to provide data access to reservations", "1.0.0", null,
+//                        null,null, null));
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(RoomsReservationServicesApplication.class, args);
